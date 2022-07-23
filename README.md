@@ -1,8 +1,8 @@
 # README #
 
-For my **Master's Degree Thesis** i've developed an Artificial System which is able to identify **arrhythmia episodes** in 15-leads ECG.   
+For my **Master's Degree Thesis** i've developed an Artificial System which is able to identify **aarrhythmia episodes** in 15-leads ECG.   
    
-The problems of identifting arrithmias in ECG has been addressed as **Semi-Supervised Anomaly Detection Task**. So, in this context, arrythmias can be seen as anomalies into normal ECG.   
+The problems of identifting arrhythmias in ECG has been addressed as **Semi-Supervised Anomaly Detection Task**. So, in this context, arrhythmias can be seen as anomalies into normal ECG.   
    
 The system's core is a Deep Convolutional AutoEncoder to whom i've given the name **DPNet**. DPNet is not open-suorce (yet?).           
 
@@ -12,7 +12,7 @@ The idea behind this system is the following: **You can't recreate what you don'
    
 This idea is concretized by training the Autoencoder using only normal ECGs, in such a way, the net will learn their salient features and so, it will be able to recreate them with a low reconstruction error.  
     
-Dually, during the test, when to the net will be also fed anomalous data containing arrythmias, the net won't be able to reconstruct them properly. The fact is that anomalous samples have salient features that are way different from the normal's ones.    
+Dually, during the test, when to the net will be also fed anomalous data containing arrhythmias, the net won't be able to reconstruct them properly. The fact is that anomalous samples have salient features that are way different from the normal's ones.    
 This is what happens graphically:   
 
 **1° Lead Normal Sample Reconstrucion.**    
