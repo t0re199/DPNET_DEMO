@@ -1,8 +1,8 @@
 # README #
 
-For my **Master's Degree Thesis** i've developed an Artificial System which is able to identify **aarrhythmia episodes** in 15-leads ECG.   
+For my **Master's Degree Thesis** i've developed an Artificial System which is able to identify **arrhythmia episodes** in 15-leads ECG.   
    
-The problems of identifting arrhythmias in ECG has been addressed as **Semi-Supervised Anomaly Detection Task**. So, in this context, arrhythmias can be seen as anomalies into normal ECGs.   
+The problems of identifying arrhythmias in ECG has been addressed as **Semi-Supervised Anomaly Detection Task**. So, in this context, arrhythmias can be seen as anomalies into normal ECGs.   
    
 The system's core is a Deep Convolutional AutoEncoder to whom i've given the name **DPNet**. DPNet is not open-suorce (yet?).           
 
