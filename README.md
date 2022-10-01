@@ -1,18 +1,19 @@
 # README #
 
-For my **Master's Degree Thesis** I've developed an Artificial Intelligence System which is able to identify **arrhythmia episodes** in 15-leads ECG.   
+For my **Master's Degree Thesis** I've developed an artificial intelligence system that is able to detect **arrhythmia episodes** in 15-leads ECG signals.   
    
-The problems of identifying arrhythmias in ECG has been addressed as **Semi-Supervised Anomaly Detection Task**. So, in this context, arrhythmias can be seen as anomalies into normal ECGs.   
+The problems of detecting arrhythmias in ECG has been addressed as **Deep Semi-Supervised Anomaly Detection Task**. So, in this context, arrhythmias can be seen as anomalies in normal ECGs.   
    
-The system's core is a Deep Convolutional AutoEncoder to whom I've given the name **DPNet**. DPNet is not open-suorce (yet?).           
+The system's core is a Deep Convolutional AutoEncoder called **DPNet**. DPNet is not open-suorce (yet?).           
 
 ## Main Idea ##
 
-The idea behind this system is the following: **You can't recreate what you don't recognise**.    
+The idea behind this system is the following: **you can't recreate what you don't recognise**.    
    
-This idea is concretized by training the Autoencoder using only normal ECGs, in such a way, the net will learn their salient features and so, it will be able to recreate them with a low reconstruction error.  
-    
-Dually, during the test, when to the net will be also fed anomalous data containing arrhythmias, the net won't be able to reconstruct them properly. The fact is that anomalous samples have salient features that are way different from the normal's ones.    
+This simple but very effective idea is made concrete by exploiting the autoencoder's ability to reconstruct the input in the following way. First, the autoencoder is trained exclusively using normal ECGs, thus it will be able to learn their salient characteristics and recreate them accurately. This result in the autoencoder producing a low reconstruction error for the normal samples.    
+
+Dually, during the evaluation phase, when to the autoencoder will be also given in input ECGs containing arrhythmias, it will not be able to recreate them properly since it has only learned the salient characteristics of the normal samples from which the anomaly ones (i.e. containing arrhythmias) differ a lot. Anomaly samples' reconstruction error is therefore sensibly higher than the normal samples' one.   
+
 This is what happens graphically:   
 
 **1° Lead Normal Sample Reconstrucion.**    
@@ -47,7 +48,7 @@ The provided system drastically reduces the human component required to build th
 **Competitor Labelling.**     
 ![](./imgs/total_labeling.png)   
     
-In contrast, **the provided system, requires only a sufficiently large number of normal samples**!   
+In contrast, **everything the provided system needs is only a sufficiently large number of normal samples**!   
 So, we move from the competitors' approch in which a label per portion is required to one in which all you need is a label for each normal ECG.   
     
 **Provided System Labelling.**     
