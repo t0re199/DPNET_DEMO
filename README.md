@@ -4,7 +4,7 @@ For my **Master's Degree Thesis** I've developed an artificial intelligence syst
    
 The problems of detecting arrhythmias in ECG has been addressed as **Deep Semi-Supervised Anomaly Detection Task**. So, in this context, arrhythmias can be seen as anomalies in normal ECGs.   
    
-The system's core is a Deep Convolutional AutoEncoder called **DPNet**. DPNet is not open-suorce (yet?).           
+The system's core is an ad-hoc designed Deep Convolutional AutoEncoder called **DPNet**. DPNet is not open-suorce (yet?).           
 
 ## Main Idea ##
 
