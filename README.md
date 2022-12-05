@@ -34,22 +34,21 @@ The proposed system differs from the others for a number of reasons:
     
 * It's a **General Purpose** system while competitors are Special Purpose.      
 
-* Supports **15-leads ECGs** instead competiors are limited to 12-leads ones.   
+* It supports **15-leads ECGs** instead competiors are limited to 12-leads ones.   
 
-* Can process **Arbitrary ECGs** without any specific segmentation algorithm (e.g. R-R interval segmentation) like competitors do.
+* It can process **Arbitrary ECGs** without any specific segmentation algorithm (e.g. R-R interval segmentation) like competitors do.
 
 
 ### Greatest Strength ###
 
-The provided system drastically reduces the human component required to build this kind of systems.   
+The provided system **drastically reduces the human component** required to build this kind of systems.   
 
-**Competitors require totally labeled data** in order to be realized. So, for a given ECG and for each portion that can be extracted from it, it's necessary a human expert (i.e. a Cardiologist) to label the portion.   
+Competitors require completely labeled data (i.e. a label for each segment that can be extracted from an ECG) and these labels have to be assigned by human specialists (so, cardiologists). Note that this is a very expensive operation both in economic and time terms.  
    
 **Competitor Labelling.**     
 ![](./imgs/total_labeling.png)   
     
-In contrast, **everything the provided system needs is only a sufficiently large number of normal samples**!   
-So, we move from the competitors' approch in which a label per portion is required to one in which all you need is a label for each normal ECG.   
+The proposed system takes the things to the opposite direction: everything the system needs is a big enough quantity of normal samples. So, we go from the competitors' approach in which it's required a label for each segment that can be extract from an ECG, to a new approach in which only a single label for an entire normal ECG is required (no label is required for potentially anomaly samples). Once trained, the proposed system will be able to autonomously detect the ECG segments containing arrhythmias, so the burden passes from the human component to the artificial intelligence, reducing both costs and time for realizing this kind of systems. 
     
 **Provided System Labelling.**     
 ![](./imgs/dpnet_labeling.png)   
@@ -57,4 +56,4 @@ So, we move from the competitors' approch in which a label per portion is requir
 
 ## Evaluation ##
 
-DPNet has been evaluated in term of ROC Curve and AUC Score. It'has obtained an **AUC Score of 0.8002** which certifies both the model's quality and robustness to noise.    
+DPNet has been evaluated in term of ROC Curve and AUC Score. It has obtained an **AUC Score of 0.8002** which certifies both the model's quality and robustness to noise.    
